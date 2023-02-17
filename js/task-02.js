@@ -1,13 +1,37 @@
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
 
-const heading = document.createElement('li');
-console.log(heading); // <h1></h1>
+// ---------------первый способ через for----------------
 
-heading.textContent = 'Potatoes';
-console.log(heading); // <h1>This is a heading</h1>
+// const elements = [];
 
-heading.classList.add('item');
+// for (let index = 0; index < ingredients.length; index++) {
+//   console.log(ingredients[index]);
+
+//   const heading = document.createElement('li');
+//   console.log(heading);
+
+//   heading.textContent = ingredients[index];
+//   heading.classList.add('item');
+
+//   elements.push(heading);
+// }
+
+// const ingredientsEl = document.querySelector('#ingredients');
+
+// ingredientsEl.append(...elements);
+
+// -------------второй способ через map-------------------
+
+const elements = ingredients.map((index) => {
+  const heading = document.createElement('li');
+  // console.log(heading);
+
+  heading.textContent = index;
+  heading.classList.add('item');
+  console.log(heading);
+  return heading;
+});
 
 const ingredientsEl = document.querySelector('#ingredients');
 
-ingredientsEl.append(heading);
+ingredientsEl.append(...elements);
