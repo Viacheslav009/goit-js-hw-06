@@ -23,7 +23,9 @@ button {
   cursor: pointer;
 }
 
-gallery {
+.gallery {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  gap: 100px;
 }
