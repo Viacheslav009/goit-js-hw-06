@@ -29,3 +29,9 @@ button {
   justify-content: stretch;
   gap: 100px;
 }
+
+.red {
+  width: 10px;
+  height: 10px;
+  background-color: #ccbfab;
+}
