@@ -1,11 +1,18 @@
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-const hex = document.querySelector('.color');
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+// }
+const hexEl = document.querySelector('.color');
 const buttonChangeColor = document.querySelector('.change-color');
 buttonChangeColor.addEventListener('click', getRandomHexColorText);
 
 function getRandomHexColorText() {
-  document.body.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  hex.textContent = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  hexEl.textContent = getRandomHexColor();
+  document.body.style.backgroundColor = hexEl.textContent;
+
+  console.log(getRandomHexColor());
+  console.log(hexEl.textContent);
+
+  function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  }
 }
