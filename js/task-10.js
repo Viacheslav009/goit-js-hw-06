@@ -30,6 +30,7 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   root.textContent = '';
+  document.getElementById('controls').firstElementChild.value = '';
 }
 
 function getRandomHexColor() {
