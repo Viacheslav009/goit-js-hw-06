@@ -10,7 +10,7 @@ function onInputFocus() {
 function onInputBlur(event) {
   console.log(event.currentTarget.value.length);
   input.classList.add('invalid');
-  if (event.currentTarget.value.length === 6) {
+  if (event.currentTarget.value.trim().length === 6) {
     input.classList.replace('invalid', 'valid');
   } else {
     return;
